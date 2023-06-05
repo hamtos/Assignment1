@@ -12,18 +12,19 @@ header{
 main{
   width: 960px;
   margin: 50px auto;
-}
-
-.box{
   display: flex;
-  gap: 30px;
 }
 
 .item{
   width: 300px;
   background-color: #eeeeee;
   padding: 10px;
-  position: relative
+  position: relative;
+  margin: 0 30px 0 0;
+}
+
+.item:last-child{
+  margin:0;
 }
 
 .step-num{
@@ -38,7 +39,19 @@ main{
 
 .image{
   height: 150px;
+  background-size:  cover;
+}
+
+.image01 {
   background-image: url(img/flow01.png);
+}
+
+.image02 {
+  background-image: url(img/flow02.png);
+}
+
+.image03 {
+  background-image: url(img/flow03.png);
 }
 
 .title{
@@ -53,4 +66,28 @@ main{
 footer{
   height: 50px;
   background-color: #aaaaaa;
+}
+
+@media screen and (max-width:768px){
+  main{
+    width: 90%;
+    display: block;
+  }
+
+  .item{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .item:last-child{
+    margin-bottom: 0;
+  }
+
+  .image{
+    background-position: bottom
+  }
+
+  .text{
+  font-size: 15px;
+  }
 }
